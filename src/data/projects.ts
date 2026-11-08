@@ -15,15 +15,14 @@ export const projects: Project[] = [
     title: "Content tools",
     slug: "tools-and-scripts",
     description: `
-      <p class="mb-4 text-lg text-[var(--white-icon)] leading-relaxed">
-        If I had to pick my favourite part of technical communication, it would be building the tools and systems behind it. As a <strong class="text-white">Content Tools Developer</strong> in 3di Information Solutions' R&D team, I work on automation, custom scripts, documentation platforms and integrations that make content workflows easier to manage and maintain.
-      </p>
-      <p class="text-lg text-[var(--white-icon)] leading-relaxed mb-6">
-        My work sits somewhere between technical writing and software development. I build Python tools for large-scale content migrations, develop web application features, customise authoring platforms, work with CI/CD pipelines and experiment with AI-assisted content workflows.
-      </p>
-      <p class="text-base text-[var(--white-icon)] italic">
-        Below are selected examples of tools, scripts and platform integrations I've worked on.
-      </p>
+      <div class="space-y-4 mb-8 text-[var(--white-icon)] leading-relaxed">
+        <p>
+          If I had to pick my favourite part of technical communication, it would be building the tools and systems behind it. As a <strong class="text-white">Content Tools Developer</strong> in 3di Information Solutions' R&D team, I work on automation, custom scripts, documentation platforms and integrations that make content workflows easier to manage and maintain.
+        </p>
+        <p>
+          My work sits somewhere between technical writing and software development. I build Python tools for large-scale content migrations, develop web application features, customise authoring platforms, work with CI/CD pipelines and experiment with AI-assisted content workflows.
+        </p>
+      </div>
     `,
     sections: [
       {
@@ -230,9 +229,6 @@ export const projects: Project[] = [
         <p>
           The subject matter has ranged from interactive gaming and cybersecurity to naval systems, medical equipment and educational hardware. Different products, different audiences, different constraints — and usually a new domain to get familiar with.
         </p>
-        <p class="text-base text-[var(--white-icon)] italic">
-          Much of this work is covered by NDAs or published in private client portals, so not every project can be shown publicly. Here's a selection of the areas and deliverables I've worked on.
-        </p>
       </div>
     `,
     sections: [
@@ -330,29 +326,29 @@ export const projects: Project[] = [
     title: "Instructional design and enablement",
     slug: "instructional-design",
     description: `
-      <p class="mb-4 text-lg text-[var(--white-icon)] leading-relaxed">
-        I enjoy figuring out not just how a tool or system works, but how to help other people use it confidently. My experience in adult education, technical training and team enablement combines practical teaching with the design of structured learning materials and onboarding experiences.
-      </p>
+      <div class="space-y-4 mb-8 text-[var(--white-icon)] leading-relaxed">
+        <p>
+          I enjoy figuring out not just how a tool or system works, but how to help other people use it confidently. My experience in adult education, technical training and team enablement combines practical teaching with the design of structured learning materials and onboarding experiences.
+        </p>
 
-      <p class="mb-3 text-white font-medium">
-        Areas of experience:
-      </p>
+        <p class="text-white font-medium">
+          Areas of experience:
+        </p>
 
-      <ul class="list-disc pl-5 space-y-2 text-[var(--white-icon)] text-base leading-relaxed mb-6">
-        <li>
-          <strong class="text-white">Course and curriculum design:</strong> Developing syllabuses, lesson materials and practical exercises for adult learners.
-        </li>
-        <li>
-          <strong class="text-white">Technical onboarding and enablement:</strong> Helping teams learn authoring tools, workflows and documentation standards through structured training and hands-on guidance.
-        </li>
-        <li>
-          <strong class="text-white">Learning materials and knowledge sharing:</strong> Creating self-paced resources, interactive demonstrations and practical guides that make new tools and processes easier to adopt.
-        </li>
-      </ul>
+        <ul class="list-disc pl-5 space-y-2 text-base">
+          <li>
+            <strong class="text-white">Course and curriculum design:</strong> Developing syllabuses, lesson materials and practical exercises for adult learners.
+          </li>
+          <li>
+            <strong class="text-white">Technical onboarding and enablement:</strong> Helping teams learn authoring tools, workflows and documentation standards through structured training and hands-on guidance.
+          </li>
+          <li>
+            <strong class="text-white">Learning materials and knowledge sharing:</strong> Creating self-paced resources, interactive demonstrations and practical guides that make new tools and processes easier to adopt.
+          </li>
+        </ul>
 
-      <p class="text-base text-[var(--white-icon)] italic">
-        A couple of examples from academic teaching and day-to-day work with technical teams.
-      </p>
+
+      </div>
     `,
     sections: [
       {
@@ -419,7 +415,13 @@ export const projects: Project[] = [
   {
     title: "Personal projects",
     slug: "personal-projects",
-    description: "My creative projects, publications, columns, and visual art.",
+    description: `
+      <div class="space-y-4 mb-8 text-[var(--white-icon)] leading-relaxed">
+        <p>
+          My creative projects, publications, columns, and visual art.
+        </p>
+      </div>
+    `,
     sections: [
       {
         title: "Kronika Geeka (pop culture & board games)",
