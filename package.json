@@ -33,11 +33,9 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@firebase/util",
-      "protobufjs",
-      "sharp"
-    ]
-  }
+"onlyBuiltDependencies": [
+    "@firebase/util",
+    "protobufjs",
+    "sharp"
+  ]
 }
