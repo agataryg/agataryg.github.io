@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Fix Astro executable permissions
+        run: chmod +x "$(readlink -f node_modules/.bin/astro)"
+
       - name: Build with Astro
         run: npm run build
         env:
