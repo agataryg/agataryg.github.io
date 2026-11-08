@@ -210,7 +210,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    title: "Tools, scripts, and integrations",
+    title: "Content tools",
     slug: "tools-and-scripts",
     description: "Automation scripts in Python, validation scripts, and tools supporting daily processes.",
     sections: [
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    title: "Various creative projects",
+    title: "Personal projects",
     slug: "personal-projects",
     description: "My creative projects, publications, columns, and visual art.",
     sections: [
