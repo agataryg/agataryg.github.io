@@ -16,19 +16,22 @@ const SkillsList = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   const skills = {
-    "Web Development": [
-      "Single Page Applications (SPAs)",
-      "Landing pages and business websites",
-      "Portfolio websites",
+    "Making knowledge work": [
+      "Content tooling and automation",
+      "Docs-as-code and content architecture",
+      "Developer and API documentation",
+      "Information architecture and search",
     ],
-    "Mobile Development": [
-      "Mobile-friendly web apps",
-      "React Native mobile apps",
+    "Helping people learn": [
+      "Instructional design and learning materials",
+      "Technical training and workshops",
+      "Knowledge sharing and onboarding",
     ],
-    "UI/UX Design & Prototyping": [
-      "UI design with Figma & Canva",
-      "UX research & improvements",
-      "Prototyping for websites & mobile apps",
+    "Solving problems": [
+      "Python scripting and workflow automation",
+      "Web applications and API integrations",
+      "AI-assisted workflows and experimentation",
+      "Prototyping and process improvement",
     ],
   };
 
