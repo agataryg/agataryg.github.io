@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const CategoryIcons = {
-  "Making knowledge work": (
+  "Building docs": (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--sec)] size-6">
   <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
   <path d="M9 17H7"/>
@@ -30,16 +30,11 @@ const SkillsList = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   const skills = {
-    "Making knowledge work": [
+    "Building docs": [
       "Content tooling and automation",
-      "Docs-as-code and content architecture",
+      "Docs-as-code",
       "Developer and API documentation",
       "Information architecture and search",
-    ],
-    "Helping people learn": [
-      "Instructional design and learning materials",
-      "Technical training and workshops",
-      "Knowledge sharing and onboarding",
     ],
     "Solving problems": [
       "Python scripting and workflow automation",
@@ -47,6 +42,11 @@ const SkillsList = () => {
       "AI-assisted workflows and experimentation",
       "Prototyping and process improvement",
     ],
+        "Helping people learn": [
+      "Instructional design and learning materials",
+      "Technical training and workshops",
+      "Knowledge sharing and onboarding",
+    ]
   };
 
   const toggleItem = (item: string) => {
