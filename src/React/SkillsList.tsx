@@ -36,17 +36,17 @@ const SkillsList = () => {
       "Developer and API documentation",
       "Information architecture and search",
     ],
-    "Helping people learn": [
-      "Instructional design and learning materials",
-      "Technical training and workshops",
-      "Knowledge sharing and onboarding",
-    ],
     "Solving problems": [
       "Python scripting and workflow automation",
       "Web applications and API integrations",
       "AI-assisted workflows and experimentation",
       "Prototyping and process improvement",
     ],
+        "Helping people learn": [
+      "Instructional design and learning materials",
+      "Technical training and workshops",
+      "Knowledge sharing and onboarding",
+    ]
   };
 
   const toggleItem = (item: string) => {
