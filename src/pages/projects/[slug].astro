@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const projects = [
+    {
+      title: "Developer portals, user manuals, and technical content",
+      slug: "technical-writing",
+      status: "Deployed",
+      description: "Przegląd dokumentacji architektonicznej, portali deweloperskich oraz systemów pomagających użytkownikom.",
+      sections: [
+        {
+          title: "Architecture & Documentation Strategy",
+          content: "<p class='mb-4'>Tutaj możesz opisać podejście do tworzenia dokumentacji, np. z użyciem Docusaurus, MadCap Flare czy struktur Markdown.</p><img src='https://placehold.co/800x400/141414/ffffff?text=Doc+Workflow' class='rounded-xl border border-[#ffffff10] my-4 w-full object-cover' />"
+        },
+        {
+          title: "Articles & 3Di Blog Contributions",
+          content: "<p>Krótkie podsumowanie i linki do publikacji technicznych:</p><ul class='list-disc pl-5 mt-2 space-y-1 text-white'><li><a href='https://example.com' target='_blank' class='text-[var(--sec)] hover:underline'>Technical Communication Best Practices</a></li></ul>"
+        }
+      ]
+    },
+    {
+      title: "Enablement, training, and instructional content",
+      slug: "instructional-design",
+      status: "On Development",
+      description: "Projektowanie ścieżek edukacyjnych, materiałów szkoleniowych oraz translacja trudnych koncepcji.",
+      sections: [
+        {
+          title: "Instructional Design Framework",
+          content: "<p>Jak przekładamy skomplikowane procesy systemowe na intuicyjne materiały instruktażowe dla użytkowników końcowych.</p>"
+        }
+      ]
+    },
+    {
+      title: "Tools, scripts, and integrations",
+      slug: "tools-and-scripts",
+      status: "Contributor",
+      description: "Automatyzacje w Pythonie, skrypty walidujące i narzędzia wspierające codzienne procesy.",
+      sections: [
+        {
+          title: "Python Automation Scripts",
+          content: "<p>Skrypty do walidacji danych lokalizacyjnych, automatyzacji tasków w DocOps i integracji z repozytoriami.</p>"
+        }
+      ]
+    },
+    {
+      title: "Various creative projects",
+      slug: "personal-projects",
+      status: "Deployed",
+      description: "Przestrzeń na projekty kreatywne, publikacje, felietony oraz twórczość wizualną łączącą design z pasją popkulturową.",
+      // Tutaj wstawiamy Twoje ulubione miejsca: Substack, Kronika Geeka, Portfolio artystyczne
+      sections: [
+        {
+          title: "Kronika Geeka (Pop Culture & Board Games)",
+          content: "<p class='mb-3'>Niezależny portal popkulturowy, recenzje planszówek oraz felietony o designie gier.</p><a href='https://example.com' target='_blank' class='inline-block px-4 py-2 rounded-lg bg-[#ffffff08] border border-[#ffffff10] text-white hover:bg-[#ffffff15] transition'>Odwiedź Kronikę Geeka &rarr;</a>"
+        },
+        {
+          title: "Substack Newsletter",
+          content: "<p class='mb-3'>Autorskie przemyślenia, felietony i kulisy projektów pisarskich oraz technologicznych.</p><a href='https://substack.com' target='_blank' class='inline-block px-4 py-2 rounded-lg bg-[#ffffff08] border border-[#ffffff10] text-white hover:bg-[#ffffff15] transition'>Czytaj na Substack &rarr;</a>"
+        },
+        {
+          title: "Art Portfolio (Lavetrata)",
+          content: "<p class='mb-3'>Malarstwo olejne, akwarele oraz urban sketching – galeria prac i projektów wizualnych.</p><a href='https://lavetrata.eu' target='_blank' class='inline-block px-4 py-2 rounded-lg bg-[#ffffff08] border border-[#ffffff10] text-white hover:bg-[#ffffff15] transition'>Zobacz lavetrata.eu &rarr;</a>"
+        }
+      ]
+    },
+  ];
+
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<Layout title={`${project.title} — Portfolio`}>
+  <main class="max-w-3xl mx-auto py-16 px-6 text-[var(--white)]">
+    
+    <!-- Powrót -->
+    <a 
+      href="/#projects" 
+      class="text-[var(--sec)] hover:underline mb-8 inline-flex items-center gap-2 text-sm tracking-wide transition"
+    >
+      &larr; Back to projects
+    </a>
+
+    <!-- Nagłówek -->
+    <div class="mb-10">
+      {project.status && (
+        <span class="inline-block py-1 text-xs uppercase tracking-wider text-[var(--white-icon)] mb-3 bg-[#ffffff08] px-3 rounded-full border border-[#ffffff10]">
+          {project.status}
+        </span>
+      )}
+      <h1 class="text-3xl md:text-5xl font-medium tracking-tight mb-4 leading-tight">
+        {project.title}
+      </h1>
+      <p class="text-lg text-[var(--white-icon)] leading-relaxed">
+        {project.description}
+      </p>
+    </div>
+
+    <!-- Lista rozwijana (Expandable sections / Accordion) -->
+    <div class="space-y-4">
+      {project.sections && project.sections.map((section, index) => (
+        <details class="group rounded-xl border border-[#ffffff10] bg-[#141414] overflow-hidden transition duration-300 open:border-[#ffffff25]">
+          <summary class="flex items-center justify-between p-5 cursor-pointer select-none font-medium text-white hover:text-[var(--sec)] transition-colors">
+            <span class="text-lg">{section.title}</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              class="size-5 text-[var(--white-icon)] group-open:rotate-180 transition-transform duration-300"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          
+          <div class="px-5 pb-6 pt-2 text-[var(--white-icon)] border-t border-[#ffffff08] leading-relaxed text-base">
+            <!-- Używamy set:html żeby obsłużyło dowolny HTML, obrazki, linki itp. -->
+            <div set:html={section.content} />
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </main>
+</Layout>
