@@ -68,7 +68,9 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-
+<style is:global>
+  @import "tailwindcss";
+</style>
 <style is:global>
   @font-face {
     font-family: "Montserrat Variable";
