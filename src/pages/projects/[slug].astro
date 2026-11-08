@@ -24,18 +24,20 @@ const { project } = Astro.props;
       &larr; Back to projects
     </a>
 
-    <div class="mb-10">
-      <h1 class="text-3xl md:text-5xl font-medium tracking-tight mb-4 leading-tight">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-medium tracking-tight mb-8 leading-tight">
         {project.title}
       </h1>
-      <p set:html={project.description} class="text-lg text-[var(--white-icon)] leading-relaxed max-w-3xl">
-        
-      </p>
+
+      <div 
+        set:html={project.description} 
+        class="text-[var(--white-icon)] leading-relaxed max-w-3xl mb-16"
+      />
     </div>
 
     <div class="space-y-4">
       {project.sections && project.sections.map((section) => (
-        <details class="group rounded-xl border border-[#ffffff10] bg-[#141414] overflow-hidden transition duration-300 open:border-[#ffffff25]">
+        <details class="details-card group rounded-xl bg-[#141414] overflow-hidden transition duration-300">
           <summary class="flex items-center justify-between p-5 cursor-pointer select-none font-medium text-white hover:text-[var(--sec)] transition-colors">
             <span class="text-lg">{section.title}</span>
             <svg 
@@ -61,3 +63,21 @@ const { project } = Astro.props;
 
   </main>
 </Layout>
+
+<style is:global>
+  /* 1. Domyślna ramka dla zamkniętego kafelka */
+  details.details-card {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* 2. Ramka przy najechaniu (hover) */
+  details.details-card:hover {
+    border-color: rgba(97, 41, 226, 0.5) !important;
+  }
+
+  /* 3. Stały fiolet #6129E2 po rozszerzeniu (open) */
+  details.details-card[open] {
+    border-color: #6129E2 !important;
+    box-shadow: 0 0 20px -5px rgba(97, 41, 226, 0.3);
+  }
+</style>
