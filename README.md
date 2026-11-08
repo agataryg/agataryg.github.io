@@ -51,7 +51,7 @@
 ## **Customization Checklist**
 Before deploying your own instance, make sure to update these placeholder values with your real information:
 - **`src/layouts/Layout.astro`**: Update `title`, `description`, `canonical` URL, `og` tags, and the JSON-LD schema with your own details.
-- **`src/components/home.astro`**: Change the greeting "Agata Rygielska" and update the GitHub, LinkedIn, and email URLs.
+- **`src/components/home.astro`**: Change the greeting "Your Name" and update the GitHub, LinkedIn, and email URLs.
 - **`src/components/projects.astro`**: Replace the generic projects (Project One, etc.) with your own, including titles, descriptions and links.
 - **`src/components/footer.astro`**: Update the social links, change the Spotify iframe to your playlist, and update the copyright name.
 
