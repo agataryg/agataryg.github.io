@@ -12,164 +12,213 @@ export interface Project {
 
 export const projects: Project[] = [
    {
-    title: "Content tools",
-    slug: "tools-and-scripts",
-    description: `
-        <p class="mb-4 text-lg text-[var(--white-icon)] leading-relaxed">
-          If I had to pick my absolute favorite part of technical communication, it is building the machinery behind it. Working as a <strong class="text-white">Content Tools Developer</strong> in a specialized R&D team at 3di Information Solutions, I design and maintain the automated pipelines, custom scripts, and customise authoring platforms that make documentation scalable and painless.
-        </p>
-        <p class="text-lg text-[var(--white-icon)] leading-relaxed mb-6">
-          I bridge the gap between technical writing and software engineering – developing Python automation for large-scale migrations, building custom web components, optimizing CI/CD workflows, and prototyping modern AI agents for content validation.
-        </p>
-        <p class="text-base text-[var(--white-icon)] italic">
-          Explore selected tooling projects, scripts, and internal platform integrations below.
-        </p>
-      `,
-    sections: [
-      {
-  title: "Custom Docusaurus template and GitLab CI/CD pipelines",
-  content: `
-    <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
-      <p>
-        Built the company-wide Docusaurus template from the ground up, starting from a base fork and collaborating closely with the Lead Consultants and UX Designer to create a tailored, production-ready documentation platform.
-      </p>
-      
-      <p class="text-white font-medium">
-        Key components and responsibilities:
-      </p>
-      
-      <ul class="list-disc pl-5 space-y-2 text-base">
-        <li>
-          <strong class="text-white">Template design and development:</strong> Built customisations on top of Docusaurus to match enterprise branding and functional requirements.
-        </li>
-        <li>
-          <strong class="text-white">Validation and publishing workflows:</strong> Implemented automated content validation and publishing pipelines using GitLab CI/CD to streamline releases.
-        </li>
-        <li>
-          <strong class="text-white">Documentation starter kit:</strong> Delivered a foundational set of documentation guides and templates within the platform, enabling teams to deliver new developer portals.
-        </li>
-      </ul>
-    </div>
-  `
-},
-{
-  title: "MadCap Flare advanced architecture, frontend magic, and global support",
-  content: `
-    <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
-      <p>
-        As the certified MadCap Advanced Developer and global template owner at <strong class="text-white">3di information solutions</strong>, I master the inner workings and eccentricities of Flare inside and out. 
-      </p>
-      
-      <p>
-        While legacy authoring tools have their limitations, I specialize in bending them to do the impossible: transforming rigid publishing structures into responsive, custom-styled enterprise developer portals.
-      </p>
-      
-      <p class="text-white font-medium">
-        Core responsibilities and advanced impact:
-      </p>
-      
-      <ul class="list-disc pl-5 space-y-2 text-base">
-        <li>
-          <strong class="text-white">Global template ownership:</strong> Designing, maintaining, and scaling the core authoring template utilized across enterprise projects.
-        </li>
-        <li>
-          <strong class="text-white">Advanced frontend customization:</strong> Pushing Flare output beyond standard limitations with custom CSS, scripting, and layout integration for developer documentation portals.
-        </li>
-        <li>
-          <strong class="text-white">Local expert support and mentoring:</strong> Acting as the go-to technical advisor for complex authoring roadblocks, troubleshooting edge cases, and coaching writers on advanced features.
-        </li>
-      </ul>
-    </div>
-  `
-},
-{
-  title: "Algolia search implementations and AI chatbot starter templates",
-  content: `
-    <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
-      <p>
-        Built a practical search and AI assistant starter kit, delivering custom search integrations for non-standard authoring environments alongside ready-to-use chatbot templates for internal portals.
-      </p>
-      
-      <p class="text-white font-medium">
-        Key components and implementation:
-      </p>
-      
-      <ul class="list-disc pl-5 space-y-2 text-base">
-        <li>
-          <strong class="text-white">Custom Algolia search integration:</strong> Connected Algolia's search engine to legacy tools like MadCap Flare, bypassing built-in UI limitations to deliver fast, relevant documentation search.
-        </li>
-        <li>
-          <strong class="text-white">Algolia Agent Studio chatbots:</strong> Designed reusable starter templates using Algolia Agent Studio to quickly deploy baseline documentation chatbots for internal software portals.
-        </li>
-        <li>
-          <strong class="text-white">Reusable starter workflows:</strong> Formatted setups into clean starter packs so teams can easily replicate search and assistant features across new documentation projects.
-        </li>
-      </ul>
-    </div>
-  `
-},
-{
-  title: "Python-based workflow automation and batch content utilities",
-  content: `
-    <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
-      <p>
-        Developed targeted Python scripts and automation utilities to eliminate repetitive manual tasks, standardizing content structures and processing bulk edits across large documentation sets.
-      </p>
+  title: "Content tools",
+  slug: "tools-and-scripts",
+  description: `
+    <p class="mb-4 text-lg text-[var(--white-icon)] leading-relaxed">
+      If I had to pick my favourite part of technical communication, it would be building the tools and systems behind it. As a <strong class="text-white">Content Tools Developer</strong> in 3di Information Solutions' R&D team, I work on automation, custom scripts, documentation platforms and integrations that make content workflows easier to manage and maintain.
+    </p>
+    <p class="text-lg text-[var(--white-icon)] leading-relaxed mb-6">
+      My work sits somewhere between technical writing and software development. I build Python tools for large-scale content migrations, develop web application features, customise authoring platforms, work with CI/CD pipelines and experiment with AI-assisted content workflows.
+    </p>
+    <p class="text-base text-[var(--white-icon)] italic">
+      Below are selected examples of tools, scripts and platform integrations I've worked on.
+    </p>
+  `,
+  sections: [
+    {
+      title: "Content migration platform development",
+      content: `
+        <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
+          <p>
+            Co-developed an internal content migration platform with a cross-functional engineering team. The application combines custom content transformation logic with cloud infrastructure to support large-scale documentation migrations.
+          </p>
 
-      <p class="text-white font-medium">
-        AI-assisted development with deterministic control:
-      </p>
+          <p class="text-white font-medium">
+            Tech stack and architecture:
+          </p>
 
+          <p>
+            The platform uses a Python Flask backend, with BeautifulSoup4 and Pandoc for document parsing, and a JavaScript frontend. It is hosted on Microsoft Azure.
+          </p>
+
+          <p class="text-white font-medium">
+            My role and core contributions:
+          </p>
+
+          <ul class="list-disc pl-5 space-y-2 text-base">
+            <li>
+              <strong class="text-white">Frontend and API integration:</strong> Developed frontend features in vanilla JavaScript and connected them to Python API endpoints in close collaboration with the engineering team.
+            </li>
+            <li>
+              <strong class="text-white">MadCap Flare transformation module:</strong> Served as the team's MadCap Flare domain expert and designed and implemented the module that converts content into XHTML structures compatible with Flare's requirements.
+            </li>
+            <li>
+              <strong class="text-white">Custom migration logic:</strong> Developed parsing rules and adapted conversion pipelines to handle non-standard source layouts, content structures and topic hierarchies.
+            </li>
+          </ul>
+        </div>
+      `
+    },
+    {
+      title: "Large-scale content migrations and transformation pipelines",
+      content: `
+        <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
+          <p>
+            Planned and carried out content migrations involving thousands of legacy topics across formats such as Word, InDesign, Markdown and HTML. Converted and restructured content for use in MadCap Flare and Docusaurus, adapting the migration process to the requirements of each source and target platform.
+          </p>
+
+          <p class="text-white font-medium">
+            Migration workflow and execution:
+          </p>
+
+          <ul class="list-disc pl-5 space-y-2 text-base">
+            <li>
+              <strong class="text-white">1,000+ topics:</strong> Developed Python scripts to parse, map and transform large documentation sets while preserving their content structure.
+            </li>
+            <li>
+              <strong class="text-white">Migration workflow:</strong> Managed the conversion process from source file preparation and schema mapping to post-migration cleanup and validation.
+            </li>
+            <li>
+              <strong class="text-white">Format-specific adaptations:</strong> Modified conversion scripts to accommodate different legacy formats, non-standard structures and project-specific requirements.
+            </li>
+          </ul>
+        </div>
+      `
+    },
+    {
+      title: "Company-wide Docusaurus template and publishing workflows",
+      content: `
+        <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
+          <p>
+            Built a company-wide Docusaurus template based on an existing fork, working with the Lead Consultant to adapt it to the company's branding, documentation requirements and publishing workflows.
+          </p>
+
+          <p class="text-white font-medium">
+            Key components and responsibilities:
+          </p>
+
+          <ul class="list-disc pl-5 space-y-2 text-base">
+            <li>
+              <strong class="text-white">Template development:</strong> Extended and customised Docusaurus components and styling to support the company's documentation standards and project requirements.
+            </li>
+            <li>
+              <strong class="text-white">Content validation and publishing:</strong> Implemented automated validation and publishing workflows using GitLab CI/CD, making documentation releases more consistent and repeatable.
+            </li>
+            <li>
+              <strong class="text-white">Documentation starter kit:</strong> Created a set of guides and starter templates to help teams set up new developer documentation portals.
+            </li>
+          </ul>
+        </div>
+      `
+    },
+   {
+  title: "MadCap Flare development, customisation and global support",
+  content: `
+    <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
       <p>
-        Leveraged Cursor and LLM-driven coding workflows to build rapid tooling, while implementing strict validation checks and error handling to ensure data integrity and prevent file corruption during bulk edits.
+        As a certified <strong class="text-white">MadCap Advanced Developer</strong> and global template owner at <strong class="text-white">3di Information Solutions</strong>, I spend a good deal of time exploring what Flare can do — and occasionally negotiating with what it insists on doing instead.
       </p>
-      
-      <p class="text-white font-medium">
-        Selected scripting and automation solutions:
+      <p>
+        I work with Flare's architecture, publishing capabilities and customisation options, extending the platform beyond its standard features with CSS, scripting and layout modifications. The goal is to make it work for the people using it, rather than the other way around.
       </p>
-      
+      <p class="text-white font-medium">Core responsibilities and contributions:</p>
       <ul class="list-disc pl-5 space-y-2 text-base">
-        <li>
-          <strong class="text-white">Bulk content and metadata processing:</strong> Wrote batch Python scripts to programmatically parse and update 200+ articles: injecting metadata, conditional tags, and customized Sphinx directives based on content patterns.
-        </li>
-        <li>
-          <strong class="text-white">Smart document formatting:</strong> Built a Python script to convert raw, unstyled Word documents into clean, structured files with applied template styles based on visual formatting logic.
-        </li>
-        <li>
-          <strong class="text-white">Batch file management:</strong> Created custom batch renaming and file reorganization scripts for content refactoring and asset management.
-        </li>
+        <li><strong class="text-white">Global template ownership:</strong> Designed, maintained and developed the core authoring template used across enterprise projects.</li>
+        <li><strong class="text-white">Frontend customisation:</strong> Extended Flare's standard output with custom CSS, scripting and layout integrations for developer documentation portals.</li>
+        <li><strong class="text-white">Technical support and mentoring:</strong> Acted as a go-to technical advisor for complex authoring issues, troubleshooting and advanced Flare features, while helping other writers get more out of the platform — and sometimes helping the platform get more out of itself.</li>
       </ul>
     </div>
   `
 },
-{
-  title: "Internal metrics platform and cross-system integrations",
-  content: `
-    <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
-      <p>
-        Contributed to the development and integration of an internal metrics product, bridging databases, CI/CD pipelines, and analytical dashboards to track publishing and documentation performance.
-      </p>
-      
-      <p class="text-white font-medium">
-        Key architectural contributions and execution:
-      </p>
-      
-      <ul class="list-disc pl-5 space-y-2 text-base">
-        <li>
-          <strong class="text-white">Database migration:</strong> Handled structured SQL data migration and deployment, safely transitioning environments from development to production.
-        </li>
-        <li>
-          <strong class="text-white">GitLab CI/CD pipeline integration:</strong> Built automated scripts within GitLab pipelines to push build telemetry data directly to backend endpoints.
-        </li>
-        <li>
-          <strong class="text-white">API coordination and dashboard delivery:</strong> Collaborated with engineering peers to feed pipeline data through custom APIs into a centralized monitoring dashboard for internal stakeholders.
-        </li>
-      </ul>
-    </div>
-  `
-}
-    ]
-  },
+    {
+      title: "Documentation search and AI assistant starter kits",
+      content: `
+        <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
+          <p>
+            Developed reusable search and AI assistant starter kits, including custom Algolia integrations for authoring environments with limited built-in search capabilities and chatbot templates for internal documentation portals.
+          </p>
+
+          <p class="text-white font-medium">
+            Key components and implementation:
+          </p>
+
+          <ul class="list-disc pl-5 space-y-2 text-base">
+            <li>
+              <strong class="text-white">Custom Algolia integration:</strong> Connected Algolia to legacy authoring platforms such as MadCap Flare, working around built-in search limitations to provide a more flexible documentation search experience.
+            </li>
+            <li>
+              <strong class="text-white">Algolia Agent Studio chatbots:</strong> Created reusable chatbot templates in Algolia Agent Studio as starting points for documentation assistants in internal software portals.
+            </li>
+            <li>
+              <strong class="text-white">Reusable setup:</strong> Packaged the integrations and configurations into starter kits that could be adapted for other documentation projects.
+            </li>
+          </ul>
+        </div>
+      `
+    },
+    {
+      title: "Python automation and content processing tools",
+      content: `
+        <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
+          <p>
+            Developed Python scripts and small utilities to automate repetitive documentation tasks, standardise content structures and process large batches of files.
+          </p>
+
+          <p class="text-white font-medium">
+            AI-assisted development with deterministic control:
+          </p>
+
+          <p>
+            I also use AI-assisted development workflows with Cursor and LLMs to prototype and build tools faster. The resulting scripts include explicit validation and error handling to help protect content integrity during bulk operations.
+          </p>
+
+          <p class="text-white font-medium">
+            Selected scripting and automation solutions:
+          </p>
+
+          <ul class="list-disc pl-5 space-y-2 text-base">
+            <li>
+              <strong class="text-white">Bulk content and metadata processing:</strong> Created Python scripts to process 200+ articles, updating metadata, conditional tags and Sphinx directives based on content patterns.
+            </li>
+            <li>
+              <strong class="text-white">Document formatting:</strong> Built a script that converts unformatted Word documents into structured files, applying template styles based on their existing visual formatting.
+            </li>
+            <li>
+              <strong class="text-white">Batch file management:</strong> Developed scripts for bulk file renaming and reorganisation to support content refactoring and asset management.
+            </li>
+          </ul>
+        </div>
+      `
+    },
+    {
+      title: "Metrics platform and system integrations",
+      content: `
+        <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
+          <p>
+            Contributed to the development of an internal metrics product, connecting database operations, CI/CD pipelines and backend services to collect and present documentation and publishing data.
+          </p>
+
+          <p class="text-white font-medium">
+            Key architectural contributions and execution:
+          </p>
+
+          <ul class="list-disc pl-5 space-y-2 text-base">
+            <li>
+              <strong class="text-white">SQL data migration:</strong> Migrated structured data between development and production environments, preparing database changes for deployment.
+            </li>
+            <li>
+              <strong class="text-white">GitLab CI/CD integration:</strong> Developed scripts that collect build telemetry in GitLab pipelines and send it to backend endpoints.
+            </li>
+            <li>
+              <strong class="text-white">API and dashboard integration:</strong> Worked with engineering colleagues to connect pipeline data through custom APIs to a central dashboard for internal stakeholders.
+            </li>
+          </ul>
+        </div>
+      `
+    }
+  ]
+},
   {
     title: "Technical writing",
     slug: "technical-writing",
@@ -377,10 +426,10 @@ export const projects: Project[] = [
       {
         title: "Kronika Geeka (pop culture & board games)",
         content: `
-          <p class="mb-3">An independent Polish pop-culture portal focusing on board games and media reviews, where I contribute in two main roles:</p>
+          <p class="mb-3">A Polish pop-culture site covering board games, games and other media. I contribute both as a writer and on the technical side of things:</p>
           <ul class="list-disc pl-5 mb-4 space-y-1 text-[var(--white-icon)]">
-            <li><strong class="text-white">Content creator:</strong> Authoring board game reviews, articles, and pop-culture content.</li>
-            <li><strong class="text-white">Webmaster:</strong> Handling WordPress administration, site maintenance, and frontend development.</li>
+            <li><strong class="text-white">Content creator:</strong> Board game reviews, articles, and pop-culture content.</li>
+            <li><strong class="text-white">Webmaster:</strong> WordPress administration, site maintenance, and frontend development.</li>
           </ul>
           <a href="https://kronika-geeka.pl/author/agata/" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-[#ffffff08] border border-[#ffffff10] text-white hover:bg-[#ffffff15] transition">Visit Kronika Geeka &rarr;</a>
         `
