@@ -32,7 +32,7 @@ const SkillsList = () => {
   const skills = {
     "Making knowledge work": [
       "Content tooling and automation",
-      "Docs-as-code and content architecture",
+      "Docs-as-code",
       "Developer and API documentation",
       "Information architecture and search",
     ],

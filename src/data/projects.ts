@@ -120,11 +120,92 @@ export const projects: Project[] = [
   {
     title: "Instructional design and enablement",
     slug: "instructional-design",
-    description: "Designing educational paths, training materials, and translating complex concepts into clear, actionable knowledge",
+    description: `
+        <p class="mb-4 text-lg text-[var(--white-icon)] leading-relaxed">
+          Combining formal pedagogical background with hands-on experience in adult education, I bridge the gap between complex software and hardware systems and effective user onboarding. Whether teaching languages or mentoring technical teams at <strong class="text-white">3di Information Solutions</strong>, my goal is always actionable, structured knowledge transfer.
+        </p>
+        
+        <p class="mb-3 text-white font-medium">
+          Core pedagogical focus and methodology:
+        </p>
+        
+        <ul class="list-disc pl-5 space-y-2 text-[var(--white-icon)] text-base leading-relaxed mb-6">
+          <li>
+            <strong class="text-white">Pedagogical foundation:</strong> Grounded in adult learning theory (andragogy), cognitive load management, and clear instructional scaffolding.
+          </li>
+          <li>
+            <strong class="text-white">Internal mentoring and workshops:</strong> Leading internal training sessions, onboarding technical staff, and coaching colleagues in effective communication practices.
+          </li>
+          <li>
+            <strong class="text-white">Hands-on and async learning design:</strong> Designing modular learning materials, interactive guides, and self-paced documentation workflows, alongside custom curriculum development for dedicated training initiatives.
+          </li>
+        </ul>
+
+        <p class="text-base text-[var(--white-icon)] italic">
+          Explore the case studies below to see how these learning strategies were applied in practice.
+        </p>
+      `,
     sections: [
+        {
+  title: "Postgraduate academic course at Vistula University",
+  content: `
+    <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
+      <p>
+        Designed and delivered a remote postgraduate course focused on single-source authoring and documentation tools for beginner technical writers at Vistula University.
+      </p>
+       <a href="https://vistula.edu.pl/kierunki-studiow/komunikacja-techniczna#Program" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-[#ffffff08] border border-[#ffffff10] text-white hover:bg-[#ffffff15] transition">See the faculty profile &rarr;</a>
+      
+      <p class="text-white font-medium">
+        Key educational and instructional components:
+      </p>
+      
+      <ul class="list-disc pl-5 space-y-2 text-base">
+        <li>
+          <strong class="text-white">Curriculum and lesson planning:</strong> Developed the course syllabus, lecture materials, and practical hands-on exercises tailored for adult learners entering technical communication.
+        </li>
+        <li>
+          <strong class="text-white">MadCap Flare and tooling practice:</strong> Guided students step-by-step through core authoring concepts in MadCap Flare via live sessions on MS Teams, complemented by practical homework assignments and a final assessment project.
+        </li>
+                <li>
+          <strong class="text-white">Student outcomes and evaluation:</strong> Delivered an introductory program that earned high feedback ratings from participants for clarity, structure, and practical relevance.
+        </li>
+        <li>
+          <strong class="text-white">Industry-aligned tools:</strong> Used Confluence and Jira throughout the course to manage tasks and materials, helping students get comfortable with standard industry tools.
+        </li>
+
+      </ul>
+    </div>
+  `
+},
+
       {
-        title: "Instructional Design example",
-        content: "<p>How we translate complex processes into intuitive learning materials.</p>"
+        title: "Internal MadCap Flare template and onboarding",
+        content: `
+    <div class="space-y-4 text-[var(--white-icon)] leading-relaxed">
+      <p>
+        As the owner and maintainer of the global MadCap Flare template project at <strong class="text-white">3di information solutions</strong>, I design and maintain the educational ecosystem surrounding our central authoring tools and DocOps standards.
+      </p>
+      
+      <p class="text-white font-medium">
+        Key educational and instructional components:
+      </p>
+      
+      <ul class="list-disc pl-5 space-y-2 text-base">
+        <li>
+          <strong class="text-white">Self-paced async learning:</strong> Developed structured training modules built directly on team feedback and skill gap analysis, allowing authors to work asynchronously and submit sample tasks for evaluation.
+        </li>
+        <li>
+          <strong class="text-white">Multi-tier onboarding and upskilling:</strong> Facilitated 0-to-1 onboarding for new hires alongside targeted advanced workshops for experienced technical writers adapting to template updates.
+        </li>
+        <li>
+          <strong class="text-white">Interactive demo sessions and feature releases:</strong> Led live demonstration sessions to present new template features, tooling customizations, and authoring guidelines.
+        </li>
+        <li>
+          <strong class="text-white">Continuous feedback loop and mentoring:</strong> Established a feedback collection system to continuously update internal docs while providing 1-on-1 mentoring for team members.
+        </li>
+      </ul>
+    </div>
+  `
       }
     ]
   },
