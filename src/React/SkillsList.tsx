@@ -32,14 +32,9 @@ const SkillsList = () => {
   const skills = {
     "Making knowledge work": [
       "Content tooling and automation",
-      "Docs-as-code and content architecture",
+      "Docs-as-code",
       "Developer and API documentation",
       "Information architecture and search",
-    ],
-    "Helping people learn": [
-      "Instructional design and learning materials",
-      "Technical training and workshops",
-      "Knowledge sharing and onboarding",
     ],
     "Solving problems": [
       "Python scripting and workflow automation",
@@ -47,6 +42,11 @@ const SkillsList = () => {
       "AI-assisted workflows and experimentation",
       "Prototyping and process improvement",
     ],
+        "Helping people learn": [
+      "Instructional design and learning materials",
+      "Technical training and workshops",
+      "Knowledge sharing and onboarding",
+    ]
   };
 
   const toggleItem = (item: string) => {
