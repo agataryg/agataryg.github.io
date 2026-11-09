@@ -93,7 +93,7 @@ const SkillsList = () => {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <ul className="space-y-2 text-[var(--white-icon)] text-sm">
+                <ul className="space-y-2 text-[var(--white-icon)] text-base">
                   {items.map((item, index) => (
                     <div key={index} className="flex items-center">
                       <span className="pl-1">•</span>
