@@ -1,0 +1,49 @@
+# Complete Archive: Agata Rygielska | Content Tools Developer & Documentation Engineer
+
+> Portfolio of Agata Rygielska, specializing in content tooling, automation, and technical writing architecture.
+
+
+# Home
+URL: https://agataryg.github.io/
+
+Main portfolio landing page.
+
+---
+
+# Instructional design and enablement
+URL: https://agataryg.github.io/projects/instructional-design
+
+I enjoy figuring out not just how a tool or system works, but how to help other people use it confidently. My experience in adult education, technical training and team enablement combines practical teaching with the design of structured learning materials and onboarding experiences.
+
+    Areas of experience:
+
+      Course and curriculum design: Developing syllabuses, lesson materials and practical exercises for adult learners.
+
+      Technical onboarding and enablement: Helping teams learn authoring tools, workflows and documentation standards through structured training and hands-on guidance.
+
+      Learning materials and knowledge sharing: Creating self-paced resources, interactive demonstrations and practical guides that make new tools and processes easier to adopt.
+
+---
+
+# Personal projects
+URL: https://agataryg.github.io/projects/personal-projects
+
+My creative projects, publications, columns, and visual art.
+
+---
+
+# Technical writing
+URL: https://agataryg.github.io/projects/technical-writing
+
+My background in technical writing spans more than eight years of working with global clients across a wide range of industries. I've worked on developer and API documentation, software platforms, hardware systems, user-facing portals, internal knowledge bases and specialised technical environments.
+
+    The subject matter has ranged from interactive gaming and cybersecurity to naval systems, medical equipment and educational hardware. Different products, different audiences, different constraints — and usually a new domain to get familiar with.
+
+---
+
+# Content tools
+URL: https://agataryg.github.io/projects/tools-and-scripts
+
+If I had to pick my favourite part of technical communication, it would be building the tools and systems behind it. As a Content Tools Developer in 3di Information Solutions' R&D team, I work on automation, custom scripts, documentation platforms and integrations that make content workflows easier to manage and maintain.
+
+    My work sits somewhere between technical writing and software development. I build Python tools for large-scale content migrations, develop web application features, customise authoring platforms, work with CI/CD pipelines and experiment with AI-assisted content workflows.
