@@ -4,29 +4,29 @@ interface Project {
   slug: string;
   link?: string;
   preview?: string;
-  shortdesc?: string;
+  status?: string;
 }
 
 const projects: Project[] = [
     {
     title: "Content tools",
     slug: "tools-and-scripts",
-    shortdesc: "Tools, scripts, and integrations",
+    status: "Tools, scripts, and integrations",
   },
   {
     title: "Technical writing",
     slug: "technical-writing",
-    shortdesc: "Developer portals, user manuals, and technical content",
+    status: "Developer portals, user manuals, and technical content",
   },
   {
     title: "Instructional design",
     slug: "instructional-design",
-    shortdesc: "Enablement, training, and instructional content",
+    status: "Enablement, training, and instructional content",
   },
   {
     title: "Personal projects",
     slug: "personal-projects",
-    shortdesc: "Various creative projects",
+    status: "Various creative projects",
   },
 ];
 ---
@@ -53,9 +53,9 @@ const projects: Project[] = [
                 </h4>
               </div>
               <div>
-                {project.shortdesc && (
-                  <p class="text-base text-[var(--white-icon)] line-clamp-2">
-                    {project.shortdesc}
+                {project.status && (
+                  <p class="text-sm text-[var(--white-icon)] line-clamp-2">
+                    {project.status}
                   </p>
                 )}
               </div>
