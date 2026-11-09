@@ -1,24 +1,32 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { projects } from '../../data/projects';
 
 export async function getStaticPaths() {
-  const { projects } = await import('../../data/projects');
+  const projectModules = import.meta.glob(
+    '../../../content/projects/*.mdx',
+    { eager: true }
+  );
 
-  return projects.map((project) => ({
-    params: { slug: project.slug },
-    props: { project },
-  }));
+  return Object.entries(projectModules).map(([path, module]) => {
+    const slug = path.split('/').pop().replace(/\.mdx$/, '');
+
+    return {
+      params: { slug },
+      props: { project: module },
+    };
+  });
 }
 
 const { project } = Astro.props;
+const Content = project.default;
+const { title, sections } = project.frontmatter;
 ---
 
-<Layout title={`${project.title} | Portfolio`}>
+<Layout title={`${title} | Portfolio`}>
   <main class="max-w-5xl mx-auto py-16 px-6 text-[var(--white)]">
-    
-    <a 
-      href="/#projects" 
+
+    <a
+      href="/#projects"
       class="text-[var(--sec)] hover:underline mb-8 inline-flex items-center gap-2 text-sm tracking-wide transition"
     >
       &larr; Back to projects
@@ -26,35 +34,35 @@ const { project } = Astro.props;
 
     <div>
       <h1 class="text-3xl md:text-5xl font-medium tracking-tight mb-8 leading-tight">
-        {project.title}
+        {title}
       </h1>
 
-      <div 
-        set:html={project.description} 
-        class="text-[var(--white-icon)] leading-relaxed max-w-3xl mb-16"
-      />
+      <div class="project-description">
+        <Content />
+      </div>
     </div>
 
-    <div class="space-y-4">
-      {project.sections && project.sections.map((section) => (
+    <div class="space-y-4 mt-12">
+      {sections?.map((section) => (
         <details class="details-card group rounded-xl bg-[#141414] overflow-hidden transition duration-300">
-          <summary class="flex items-center justify-between p-5 cursor-pointer select-none font-medium text-white hover:text-[var(--sec)] transition-colors">
-            <span class="text-lg">{section.title}</span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              stroke-width="2" 
-              stroke-linecap="round" 
-              stroke-linejoin="round" 
-              class="size-5 text-[var(--white-icon)] group-open:rotate-180 transition-transform duration-300"
+          <summary class="flex items-center justify-between px-6 py-5 md:px-8 md:py-6 cursor-pointer select-none font-medium text-white hover:text-[var(--sec)] transition-colors">
+            <span class="text-lg md:text-xl font-semibold tracking-wide">{section.title}</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-5 text-[var(--white-icon)] group-open:rotate-180 transition-transform duration-300 flex-shrink-0 ml-4"
             >
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </summary>
-          
-          <div class="px-5 pb-6 pt-2 text-[var(--white-icon)] border-t border-[#ffffff08] leading-relaxed text-base">
+
+          <div class="px-6 pb-8 pt-4 md:px-8 md:pb-8 md:pt-4 text-[var(--white-icon)] border-t border-[#ffffff08] text-base leading-loose">
             <div set:html={section.content} />
           </div>
         </details>
@@ -65,19 +73,92 @@ const { project } = Astro.props;
 </Layout>
 
 <style is:global>
-  /* 1. Domyślna ramka dla zamkniętego kafelka */
+  .project-description {
+    color: var(--white-icon);
+    line-height: 1.8;
+    max-width: 48rem;
+  }
+
+  .project-description p {
+    margin-bottom: 1.25rem;
+  }
+
+  .project-description ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-description li {
+    margin-bottom: 0.65rem;
+    line-height: 1.75;
+  }
+
+  .project-description strong {
+    color: var(--white);
+  }
+
   details.details-card {
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 
-  /* 2. Ramka przy najechaniu (hover) */
   details.details-card:hover {
     border-color: rgba(97, 41, 226, 0.5) !important;
   }
 
-  /* 3. Stały fiolet #6129E2 po rozszerzeniu (open) */
   details.details-card[open] {
     border-color: #6129E2 !important;
     box-shadow: 0 0 20px -5px rgba(97, 41, 226, 0.3);
+  }
+  
+  /* Dropdown content - tuning oddechu i czytelności */
+  .details-card > div {
+    line-height: 1.85 !important; /* Wyższy line-height dla całej treści */
+  }
+
+  .details-card ul {
+    list-style-type: disc !important;
+    padding-left: 1.5rem !important;
+    margin: 1.25rem 0 1.5rem !important;
+  }
+
+  .details-card li {
+    padding-left: 0.25rem;
+    margin-bottom: 0.85rem !important; /* Więcej miejsca między podpunktami */
+    line-height: 1.8 !important;
+  }
+
+  .details-card li::marker {
+    color: var(--white-icon);
+  }
+
+  .details-card p {
+    margin-bottom: 1.25rem !important; /* Większy odstęp pod akapitami */
+  }
+
+  /* Subtle button-style links */
+  .details-card a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: #ffffff08;
+    border: 1px solid #ffffff10;
+    color: white;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .details-card a:hover {
+    background: #ffffff15;
+    border-color: #ffffff25;
+    text-decoration: none;
+  }
+
+  .project-description em,
+  .project-description i,
+  .details-card em,
+  .details-card i {
+    font-style: italic;
   }
 </style>

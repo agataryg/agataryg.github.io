@@ -1,122 +1,16 @@
-# Agata Rygielska — Documentation Engineer
+# Agata Rygielska | Content Tools Developer & Documentation Engineer
 
-> Professional portfolio of Agata Rygielska, a Documentation Engineer working at the intersection of technical communication, software development, content tooling and instructional design.
+> Portfolio of Agata Rygielska, specializing in content tooling, automation, and technical writing architecture.
 
-Agata Rygielska is a Documentation Engineer based in Kraków, Poland, with over eight years of experience in technical writing and more than two years of experience in documentation engineering, content tooling and automation.
+This file serves as an index of available resources for Language Models (LLMs).
 
-Her work combines technical problem-solving, solution design and hands-on implementation. She builds documentation tools, improves content workflows, automates repetitive tasks and develops systems that help people understand and use complex software products.
+## Projects & Sections
 
-Her professional focus includes developer experience (DevEx), documentation architecture, docs-as-code, content tooling, automation, API integrations and AI-assisted documentation workflows.
+- [Home](https://agataryg.github.io/): Main landing page of the portfolio.
+- [Instructional design and enablement](https://agataryg.github.io/projects/instructional-design)
+- [Personal projects](https://agataryg.github.io/projects/personal-projects)
+- [Technical writing](https://agataryg.github.io/projects/technical-writing)
+- [Content tools](https://agataryg.github.io/projects/tools-and-scripts)
 
-## Main portfolio sections
-
-- [Home](https://agataryg.github.io/): Professional introduction, areas of expertise and overview of work.
-- [Content tools and documentation engineering](https://agataryg.github.io/projects/tools-and-scripts/): Engineering projects, automation, Python scripts, content migrations, documentation platforms and integrations.
-- [Technical writing](https://agataryg.github.io/projects/technical-writing/): Technical communication experience, documentation architecture and selected writing samples.
-- [Instructional design](https://agataryg.github.io/projects/instructional-design/): Learning materials, technical training, onboarding and knowledge-sharing projects.
-- [Personal projects](https://agataryg.github.io/projects/personal-projects/): Independent publishing, creative work and projects outside the main professional portfolio.
-
-## Professional expertise
-
-### Documentation engineering
-
-- Developer and API documentation.
-- Documentation architecture and information design.
-- Docs-as-code workflows and Git-based publishing.
-- Documentation portals and authoring platforms.
-- Content migrations and structured content transformation.
-- Search implementation and documentation discovery.
-- Documentation tooling customisation and integrations.
-
-### Content tools and automation
-
-- Python scripting for content processing, validation and migration.
-- Automation of documentation and publishing workflows.
-- REST API integrations and data processing.
-- Metadata management and content transformation.
-- Custom documentation platform templates and extensions.
-- AI-assisted workflows and documentation assistant prototypes.
-
-### Technical writing
-
-- Developer documentation and API references.
-- Software and hardware documentation.
-- User guides, technical manuals and knowledge bases.
-- Information architecture and content strategy.
-- Technical communication for complex products.
-- Collaboration with developers, product teams and technical stakeholders.
-
-### Instructional design and enablement
-
-- Technical training and educational content.
-- Learning materials and practical exercises.
-- Technical onboarding and knowledge transfer.
-- Documentation tooling workshops.
-- Mentoring and cross-team knowledge sharing.
-
-## Selected engineering work
-
-The portfolio includes examples of:
-
-- Python-based content migration and processing tools.
-- Large-scale documentation migrations involving over 1,000 topics.
-- Docusaurus template development and GitLab CI/CD publishing workflows.
-- MadCap Flare template customisation, CSS and scripting.
-- Algolia search integrations.
-- Documentation assistant starter kits and LLM-based prototypes.
-- REST API integrations and automated content workflows.
-- Database and metadata processing solutions.
-
-See [Content tools and documentation engineering](https://agataryg.github.io/projects/tools-and-scripts/) for project details and examples.
-
-## Technical skills and tools
-
-- **Programming and web development:** Python, JavaScript, HTML, CSS, React, Astro, Flask.
-- **Documentation platforms:** MadCap Flare, Docusaurus, Markdown, Confluence.
-- **APIs and integrations:** REST APIs, content services and data integrations.
-- **Search and AI:** Algolia, LLM-assisted workflows, RAG prototypes and documentation assistants.
-- **Development workflows:** Git, GitLab CI/CD, GitHub, Vercel.
-- **Automation:** Content migration, validation, metadata processing and workflow scripting.
-
-## Professional background
-
-Agata has worked across technical writing, documentation engineering, content tooling development and product ownership.
-
-Her experience includes:
-
-- Building and maintaining documentation systems.
-- Developing and improving internal content tools.
-- Designing documentation workflows and publishing processes.
-- Collaborating with engineering teams and clients.
-- Consulting on documentation architecture and tooling.
-- Training users and teams in documentation platforms.
-- Supporting complex technical products across multiple industries.
-
-Her approach combines technical communication expertise with practical software development and a focus on solving real workflow problems.
-
-## Personal projects
-
-Outside her main professional work, Agata develops independent publishing and creative projects.
-
-- [Kronika Geeka](https://kronika-geeka.pl/): Polish-language writing about pop culture, games and related creative interests.
-- [La Vetrata](https://lavetrata.eu/): Personal portfolio of oil paintings, watercolours and visual art.
-
-## Links and profiles
-
-- [Portfolio website](https://agataryg.github.io/)
-- [LinkedIn](https://www.linkedin.com/in/agataryg/)
-- [Art portfolio — La Vetrata](https://lavetrata.eu/)
-- [Kronika Geeka](https://kronika-geeka.pl/)
-- [Substack newsletter](https://agatarygielska.substack.com/)
-
-## Website implementation
-
-The portfolio is a static website built with Astro, React and Tailwind CSS. It uses custom interactive components and is deployed through GitHub Pages.
-
-GitHub repository: https://github.com/agataryg/agataryg.github.io
-
-## Content and accuracy notes
-
-This website presents selected professional work and experience. Some client names, proprietary materials and project details are omitted or anonymised due to confidentiality agreements.
-
-The portfolio is intended to represent Agata's professional experience in documentation engineering, technical communication, content tooling and automation. Personal creative projects are presented separately from her primary professional specialisation.
+## Full Content
+- [llms-full.txt](https://agataryg.github.io/llms-full.txt): Complete knowledge base in a single file.
