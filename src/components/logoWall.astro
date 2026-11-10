@@ -38,7 +38,7 @@ const technologies = [
             loading={index < technologies.length ? "eager" : "lazy"}
             decoding="async"
           />
-          <span class="text-lg font-medium text-[var(--white-icon)] whitespace-nowrap">
+          <span class="text-lg font-medium text-[var(--white-icon)] whitespace-nowrap transition-colors group-hover:text-white">
             {tech.charAt(0).toUpperCase() + tech.slice(1)}
           </span>
         </div>
