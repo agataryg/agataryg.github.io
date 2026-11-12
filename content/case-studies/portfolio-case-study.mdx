@@ -1,0 +1,35 @@
+---
+title: "Live in 10 hours" 
+subtitle: "Building my portfolio with Astro and GitHub Actions"
+---
+
+**Timeline:** Under 10 hours (from template choice to live deployment)  
+**Stack:** Astro, TypeScript, Tailwind CSS + Custom CSS, GitHub Pages, GitHub Actions  
+**Scope:** Design adaptation, custom frontend logic, free CI/CD setup, and Projects copywriting.
+## The approach: finding a base and diving in
+Instead of starting with a completely blank screen, I grabbed a clean, minimal foundation ([Dark Minimal](https://astro.build/themes/details/darkminimal/)) and figured out the rest on the fly. I wanted a design I actually enjoyed, and building it myself was the fastest way to learn.
+
+## Why Astro and automated deployment
+For a static portfolio, **Astro** is fast and stays out of your way. Paired with **GitHub Pages** and a simple **GitHub Actions** workflow, the entire hosting pipeline is completely free and automated. Push to `main`, and it builds and ships without manual friction.
+
+## AI as a living manual
+I used free Gemini and ChatGPT as interactive documentation and a peer reviewer. Whenever I hit a weird Astro quirk or needed a component fast, AI acted as an instant shortcut instead of endless doc-searching. 
+
+This was especially true for styling. Let's face it: **Tailwind is mostly written by AI here.** Moving from clean CSS to stringing together utility classes felt tedious, so I let the model handle the bulk of the utility boilerplate.
+
+## LLM-ready infrastructure
+I added a Python script to the CI/CD pipeline that automatically parses project MDX files and generates `llms.txt` and `llms-full.txt` on every deploy. It gives AI crawlers a clean, structured index and full-text knowledge base out of the box.
+
+## UI and content details
+- **Aesthetic first and smooth animations:** I wanted something genuinely sleek, not just a barebones container. Treating the template's existing CSS as a loose base and tweaking it with AI felt almost like working in a WYSIWYG editor, letting me rapidly shape the visual layer.
+- **Built with real content:** I wrote all project breakdowns and descriptions alongside the code, keeping the site presentable and layout-tested all the way through.
+
+## Custom CSS vs. Tailwind
+Tailwind came baked into the base template, so I adapted to the existing setup rather than ripping it out. Working within an inherited stack is standard practice, and my goal was to customize the theme quickly.
+
+That said, as a classic CSS nerd, Tailwind’s utility clutter and awkward DevTools debugging didn’t win me over. For basic grid and spacing, the existing classes were fine. But whenever I needed custom styling, dropping into scoped plain CSS was cleaner, more readable, and faster to debug in the inspector.
+
+
+## Takeaways
+- **Learning by doing works:** Diving straight into a project with a solid template teaches you more in ~10 hours than weeks of passive tutorials.
+- **Test modern stacks firsthand:** Using LLMs to flatten the learning curve lets you try out modern tools (like Astro and Tailwind) quickly and form an informed, firsthand opinion rather than just echoing internet debates.
