@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
+import BackToTop from '../../components/BackToTop.astro';
 export async function getStaticPaths() {
   const caseStudyModules = import.meta.glob(
     '../../../content/case-studies/*.mdx',
@@ -76,6 +76,7 @@ const { title, subtitle, sections } = caseStudy.frontmatter;
     </div>
 
   </main>
+  <BackToTop />
 </Layout>
 
 <style is:global>
